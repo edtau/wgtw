@@ -3,13 +3,15 @@
 namespace Anax\Comment;
 
 /**
- * Model for Users.
- *
+ * Class Comment
+ * @package Anax\Comment
  */
 class Comment extends \Anax\Database\Database
 {
-
-
+    /**
+     * Method to retive all comments
+     * @return mixed
+     */
     public function findAllComments(){
 
         $this->db->select("
@@ -34,8 +36,12 @@ class Comment extends \Anax\Database\Database
             ->groupBy("c.id");
         $result = $this->db->executeFetchAll();
         return $result;
-
     }
+    /**
+     * Method to retrive comment written by user
+     * @param $id_user
+     * @return mixed
+     */
     public function findAllCommentsByIdUser($id_user){
 
         $this->db->select("
@@ -61,6 +67,5 @@ class Comment extends \Anax\Database\Database
             ->groupBy("c.id");
         $result = $this->db->executeFetchAll([$id_user]);
         return $result;
-
     }
 }
