@@ -1,10 +1,11 @@
 # wgtw 1.1
 Application to build question and answer system. With this application you have somewhat of a stackoverflow clone and works about 
 the same as that page. 
-You can vote up and down the posts, post comments, post answers and questions. 
+You can vote on posts, comments, answers and questions. Ask questions. Answer to the questions. 
+
 Built on ANAX-MVC
 # Installation
-To install the application you first need to download a copy please feel either clone or download the package as a zip-file. 
+To install the application you first need to download a copy. Please feel free to either clone or download the package as a zip-file. 
 Put all the files in the root folder and do the following. 
 
 1. Modify the .htaccess to get clean urls according to your server standards, the file is located in the folder webroot. 
