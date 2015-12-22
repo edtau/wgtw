@@ -2,8 +2,8 @@
 namespace Anax\Comment;
 
 /**
- * A controller for users and admin related events.
- *
+ * Class CommentController
+ * @package Anax\Comment
  */
 class CommentController implements \Anax\DI\IInjectionAware
 {
@@ -27,7 +27,10 @@ class CommentController implements \Anax\DI\IInjectionAware
         $this->user->setDI($this->di);
 
     }
-
+   /**
+    * Method to write answer to question
+     * @param $id_post
+     */
     public function answerAction($id_post)
     {
         $form = new \Anax\HTMLForm\AddCommentForm($id_post);
@@ -35,7 +38,9 @@ class CommentController implements \Anax\DI\IInjectionAware
 
         $form->setDI($this->di);
         $result = $form->check();
-          $allowed_to_vote = false;
+        $allowed_to_vote = false;
+        
+        //if form is sent without error or posted otherwise show form
         if($result){
             $this->di->theme->setTitle("Ask Question");
             $this->di->views->add('default/page', [
@@ -53,6 +58,10 @@ class CommentController implements \Anax\DI\IInjectionAware
             ]);
         }
     }
+    /**
+     * Method to write answer to question
+     * @param $id_post
+     */
     public function questionAction($id_post)
     {
         $form = new \Anax\HTMLForm\AddCommentForm($id_post);
@@ -60,6 +69,7 @@ class CommentController implements \Anax\DI\IInjectionAware
 
         $form->setDI($this->di);
         $result = $form->check();
+        //if form is sent without error or posted otherwise show form
         if($result){
             $this->di->theme->setTitle("Ask Question");
             $this->di->views->add('default/page', [
