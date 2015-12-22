@@ -3,12 +3,15 @@
 namespace Anax\Answer;
 
 /**
- * Model for Users.
+ * Model for Answers.
  *
  */
 class Answer extends \Anax\Database\Database
 {
-
+    /**
+    *  Method to retrive all answers joins votes and users
+     * @return mixed
+     */
     public function findAllAnswers(){
         $this->db->select("
             a.id as id_answer,
@@ -33,6 +36,11 @@ class Answer extends \Anax\Database\Database
         $result = $this->db->executeFetchAll();
         return $result;
     }
+    /**
+     * Method to retrive all answers by id for the user
+     * @param $id_user
+     * @return mixed
+     */
     public function findAllAnswersByIdUser($id_user){
         $this->db->select("
             a.id as id_answer,
@@ -59,7 +67,12 @@ class Answer extends \Anax\Database\Database
         return $result;
     }
 
-
+     /**
+     * Method to retrive answer either on id_question or id_post 
+     * @param bool|false $id_question
+     * @param bool|false $id_post
+     * @return mixed
+     */
     public function findAnswer($id_question = false, $id_post = false){
 
         if($id_post){
