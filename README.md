@@ -46,6 +46,7 @@ Visit this page to get a copy of the framework this application is built upon.
 2. Improve security 
 3. Improve error / validation presentation 
 
+## Database design: 
 ![alt tag](https://github.com/edtau/wgtw/blob/master/database.PNG)
 
 
