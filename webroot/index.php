@@ -40,12 +40,7 @@ $di->set('PageController', function () use ($di) {
 
     return $controller;
 });
-$di->set('PostController', function () use ($di) {
-    $controller = new Anax\Post\PostController();
-    $controller->setDI($di);
-
-    return $controller;
-});
+ 
 $di->set('QuestionController', function () use ($di) {
     $controller = new Anax\Question\QuestionController();
     $controller->setDI($di);
@@ -107,13 +102,7 @@ $di->set('InstallController', function () use ($di) {
     return $controller;
 });
 
-
-$di->set('DbtestController', function () use ($di) {
-    $controller = new Anax\Dbtest\DbtestController();
-    $controller->setDI($di);
-
-    return $controller;
-});
+ 
 
 //</editor-fold>
 ####################################### [about]
