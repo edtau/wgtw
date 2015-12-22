@@ -11,7 +11,7 @@ Put all the files in the root folder and do the following.
 1. Modify the .htaccess to get clean urls according to your server standards, the file is located in the folder webroot. 
 2. Open the file config_with_app.php and enter your database details. The file is located in the folder app/config/database. 
 3. If everything is done correctly go to the url (name of your application)webroot/install. 
-4. The application set up the database tables and you are redo to work with the application. 
+4. The application sets up the database tables and you are redo to work with the application. 
 5. It is highly recommended to uncomment the installController after installation, the file is located in app/src/install. 
 # Home 
 This link is the startpage for the application, information about the posted questions, users and tags is displayed here. 
