@@ -1,9 +1,13 @@
  <div class="container">
     <?php foreach ($comments as $comment) : ?>
 
-
+       <?php if($comment->id_user == $id_user):?>
+       <?php $allowed_to_vote = false ?>
+       <?php endif;?>
+ 
         <!-- Check if the user is allowed to vote -->
         <?php foreach($votes as $vote) :?>
+             
             <?php if($vote->id_comment == $comment->id_comment AND $vote->id_user == $id_user OR $comment->id_user == $id_user):?>
                 <?php $allowed_to_vote = false?>
             <?php endif;?>
