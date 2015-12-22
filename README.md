@@ -1,5 +1,7 @@
 # wgtw 1.1
-Application to build question and answer system. 
+Application to build question and answer system. With this application you have somewhat of a stackoverflow clone and works about 
+the same as that page. 
+You can vote up and down the posts, post comments, post answers and questions. 
 Built on ANAX-MVC
 # Installation
 To install the application you first need to download a copy please feel either clone or download the package as a zip-file. 
@@ -38,7 +40,10 @@ to your application.
 Visit this page to get a copy of the framework this application is built upon. 
 <a href="https://github.com/mosbth/Anax-MVC.git">Anax-mvc</a>
 
-
+# Future work
+1. Add more edit options. 
+2. Improve security 
+3. Improve error / validation presentation 
 
 
 
