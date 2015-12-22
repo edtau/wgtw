@@ -2,14 +2,18 @@
 namespace Anax\Answer;
 
 /**
- * A controller for users and admin related events.
- *
+ * Class AnswerController
+ * @package Anax\Answer
  */
 class AnswerController implements \Anax\DI\IInjectionAware
 {
     use \Anax\DI\TInjectionaware,
         \Anax\MVC\TRedirectHelpers;
 
+    /**
+     * Method that act as constructor  
+     * injects services
+     */
     public function initialize()
     {
         $this->question = new \Anax\Question\Question();
@@ -28,6 +32,10 @@ class AnswerController implements \Anax\DI\IInjectionAware
         $this->tag->setDI($this->di);
 
     }
+    /**
+     * Method to write answer  
+     * @param $id_post
+     */
     public function writeAction($id_post){
 
         $title = "Write Answer";
@@ -35,11 +43,10 @@ class AnswerController implements \Anax\DI\IInjectionAware
 
         $question = $this->question->findQuestion($id_post);
 
-
         $form  = new \Anax\HTMLForm\AddAnswerForm($question[0]->id_question);
         $form->setDI($this->di);
-
-
+        
+        //if user is logged in show the form
         if($this->user->isLoggedIn()) {
             $result_save =  $form->check();
             if($result_save){
@@ -48,15 +55,13 @@ class AnswerController implements \Anax\DI\IInjectionAware
                     'content' => "Answer saved"
                 ]);
             } else {
-
+                //if failed to save answer show form
                 $this->di->views->add('question/question', [
                     'title' => "Write answer",
                     'form' => $form->getHTML(),
                     'question' =>$question
                 ]);
             }
-
         }
     }
-
 }
