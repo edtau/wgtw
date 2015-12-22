@@ -19,8 +19,4 @@ $di->setShared('db', function () {
     $db->connect();
     return $db;
 });
-
-$di->setShared('auth', function () {
-    $auth = new \Anax\User\Auth();
-    return $auth;
-});
+ 
