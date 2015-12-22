@@ -35,7 +35,7 @@ A link to get to your own profile, this is where you update your profile.
 
 ## About us
 The about us page, the file is located app/content/ and is named about.md feel free to edit this file to according 
-to your application. 
+your application. 
 
 ## Need to know more?
 Visit this page to get a copy of the framework this application is built upon. 
