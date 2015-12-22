@@ -22,7 +22,7 @@ answers/comments that belong to it.
 
 
 ##  Users
-Display a list with the users and their rank. If you click on a user a the user profile is displayed. 
+Display a list with the users and their rank. If you click on a user a the user profile is displays. 
 
 ## Tags
 Tags is used to display the tags and to add more tags to the database you have to be logged in to do this. 
