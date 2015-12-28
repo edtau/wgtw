@@ -61,9 +61,6 @@
     <?php endif;?>
 </div>
 
-
-
-
 <div class="row">
     <h1>Posted questions</h1>
     <div class="col-md-8">
@@ -86,7 +83,7 @@
                 <?php endif;?>
         <?php endforeach;?>
             <tr>
-                <td><a href="<?= $this->url->create("question/view/$question->title") ?>"><?= $question->title ?></a></td>
+                <td><a href="<?= $this->url->create("question/view/$question->id_question") ?>"><?= $question->title ?></a></td>
                 <td><?=$question->created_post?></td>
                 <td><?=$question->up_vote?></td>
                 <td><?=$question->down_vote?></td>
